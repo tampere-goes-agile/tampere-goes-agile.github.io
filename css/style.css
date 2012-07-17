@@ -219,6 +219,12 @@ header div.container {
     text-shadow: 0 1px 0 #3f4143;
 }
 
+.coming-soon {
+    color: #deff00;
+    font-size: 0.625em;
+    text-shadow: none;
+} 
+
 #logo {
     margin: -0.375em auto -0.375em auto;
 }
@@ -232,13 +238,13 @@ header div.container {
 }
 
 #logo a {
-    width: 6.66em;
-    height: 6.66em;
+    width: 6.65em;
+    height: 6.65em;
 }
 
 #logo a img {
-    width: 6.66em;
-    height: 6.66em;
+    width: 6.65em;
+    height: 6.65em;
 }
 
 .container {
