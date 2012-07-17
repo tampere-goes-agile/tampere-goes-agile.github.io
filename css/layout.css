@@ -1,0 +1,139 @@
+body {
+    background: url(../img/body-bg.jpg) #3f4143 top center no-repeat;
+    font: 100%/1.5 'PT Sans', sans-serif; 
+}
+
+header {
+    background: url(../img/header-bg.png) center center no-repeat #a5cc3e;
+    height: 11.25em;
+    margin: 1.5em 0;
+}
+
+header div.container {
+    overflow: visible;
+    text-align: left;
+}
+
+h2 {
+    text-align: right;
+}
+
+#nav {
+    float: left;
+    width: 12.875em;
+    overflow: hidden;
+    text-align: left;
+    margin-right: 2.875em;
+}
+
+#nav li {
+    display: list-item;
+    margin: 0.25em 0;
+}
+
+.nav-anchor {
+    padding: 0.8em;
+}
+
+.active .nav-anchor {
+    background-image: url(../img/li-active.png);
+    background-repeat: no-repeat;
+    background-position: 0.8em center;
+    padding: 0.8em 0.8em 0.8em 2.4em;
+}
+
+#logo {
+    display: block;
+    left: 0.83em;
+    margin: 0;
+    position: absolute;
+    top: -0.55em;
+}
+
+#logo a {
+    display: block;
+    width: 215px;
+    height: auto;
+}
+#logo a img {
+    width: 215px;
+    height: auto;   
+}
+
+#header-free {
+    display: block;
+    right: 0.83em;
+    margin: 0;
+    position: absolute;
+    top: -1.5em;
+}
+
+#header-date-info {
+    display: block;
+    padding: 1em 2em 0 18em;
+}
+
+aside {
+    float: left;
+    width: 16.25em;
+    margin-left: 2.25em;
+}
+
+aside h2 {
+    text-align: left;
+}
+
+aside .map {
+    background: url(../img/diag-bg.png) top left repeat;
+    margin-right: 0;
+    padding: 0.25em 0.25em 0 0.25em;
+}
+
+.grid {
+    float: left;
+    width: 16.25em;
+    margin-left: 2.25em;
+}
+
+.grid-2 {
+    float: left;
+    width: 34.75em;
+    margin-left: 2.25em;
+}
+
+.left-col {
+    margin-right: 2.875em;
+    width: 12.875em;
+    clear: right;
+    float: left;
+}
+
+@media screen and (min-width: 60em) and (max-width: 73.75em) {
+    h2 {
+        text-align: left;
+    }
+    .container {
+        max-width: 60em;
+        padding: 0 1em;
+    }
+    .left-col {
+        display: block;
+        float: none;
+    }
+    aside {
+        clear: both;
+        float: none;
+        margin-left: 18em;
+        width: auto;
+    }
+    aside .map {
+        float: left;
+        margin-right: 2.25em;
+    }
+    aside .p {
+        float: left;
+    }
+    #header-free {
+        display: none;
+    }
+}
