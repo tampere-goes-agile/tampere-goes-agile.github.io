@@ -205,6 +205,11 @@ header div.container {
     text-shadow: 0 1px 0 #3f4143;
 }
 
+span.nav-anchor:hover {
+    color: #3f4143;
+    text-shadow: 0 1px 0 #c3dc74;
+}
+
 .active .nav-anchor {
     background-color: #8ABC33;
     background-image: linear-gradient(top, #8ABC33 0%, #77B12C 100%);
