@@ -137,7 +137,7 @@ section.light h3 {
     text-transform: none;
 }
 p {
-    font-size: 0.875em;
+    font-size: 1em;
     margin: 0 0 1.5em;
 }
 
@@ -200,9 +200,15 @@ header div.container {
     vertical-align: middle;
 }
 
+
 .nav-anchor:hover {
     color: #fff;
     text-shadow: 0 1px 0 #3f4143;
+}
+
+span.nav-anchor:hover {
+    color: #3f4143;
+    text-shadow: 0 1px 0 #c3dc74;
 }
 
 .active .nav-anchor {
@@ -263,7 +269,7 @@ section.light {
 }
 
 .intro {
-    font-size: 1.125em;
+    font-size: 1.25em;
 }
 
 section, footer, aside {
