@@ -108,6 +108,95 @@ aside .map {
     float: left;
 }
 
+@media screen and (min-width: 40.5em) and (max-width: 59.99em) {
+    h2 {
+        text-align: left;
+    }
+    /* FLUID BREAKPOINT START */
+    .container {
+        width: 90%;
+        padding: 0 5%;
+    }
+    #nav {
+        width: 29%;
+        margin-right: 4%;
+    } 
+    .left-col {
+        display: block;
+        float: none;
+        margin-right: 4%;
+    }
+    aside {
+        clear: both;
+        float: none;
+        margin-left: 33%;
+        width: auto;
+    }
+    aside .map {
+        float: left;
+        margin-right: 4%;
+    }
+    aside .p {
+        float: left;
+    }
+    #header-free {
+        display: none;
+    }
+    .grid {
+        float: left;
+        width: 29%;
+        margin-left: 4%;
+    }
+    .grid-2 {
+        float: left;
+        width: 62%;
+        margin-left: 4%;
+    }
+    /* FIXED BREAKPOINT START
+    
+    .container {
+        max-width: 40.5em;
+        padding: 0 1em;
+    }
+    #nav {
+        margin-right: 1.5em;
+    } 
+    .left-col {
+        display: block;
+        float: none;
+        margin-right: 1.5em;
+    }
+    aside {
+        clear: both;
+        float: none;
+        margin-left: 15.75em;
+        width: auto;
+    }
+    aside .map {
+        float: left;
+        margin-right: 2.25em;
+    }
+    aside .p {
+        float: left;
+    }
+    #header-free {
+        display: none;
+    }
+    .grid {
+        float: left;
+        width: 11em;
+        margin-left: 1.5em;
+    }
+    .grid-2 {
+        float: left;
+        width: 23em;
+        margin-left: 1.5em;
+    }
+
+    FIXED BREAKPOINT END */
+}
+
+
 @media screen and (min-width: 60em) and (max-width: 73.75em) {
     h2 {
         text-align: left;
