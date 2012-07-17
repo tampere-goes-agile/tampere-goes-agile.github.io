@@ -124,7 +124,7 @@ aside .map {
     .left-col {
         display: block;
         float: none;
-        margin-right: 4%;
+        width: auto;
     }
     aside {
         clear: both;
@@ -208,6 +208,7 @@ aside .map {
     .left-col {
         display: block;
         float: none;
+        width: auto;
     }
     aside {
         clear: both;
