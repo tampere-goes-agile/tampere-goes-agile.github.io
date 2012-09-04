@@ -184,15 +184,16 @@ header div.container {
 }
 
 .nav-anchor {
-    background-color: #6C8B3A;
-    background-image: linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
-    background-image: -o-linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
-    background-image: -moz-linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
-    background-image: -webkit-linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
-    background-image: -ms-linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
+    background-color: #8ABC33;
+    background-image: linear-gradient(top, #8ABC33 0%, #77B12C 100%);
+    background-image: -o-linear-gradient(top, #8ABC33 0%, #77B12C 100%);
+    background-image: -moz-linear-gradient(top, #8ABC33 0%, #77B12C 100%);
+    background-image: -webkit-linear-gradient(top, #8ABC33 0%, #77B12C 100%);
+    background-image: -ms-linear-gradient(top, #8ABC33 0%, #77B12C 100%);
     background-image: -webkit-gradient(
-        linear,left top,left bottom,color-stop(0.45, #6C8B3A),color-stop(1, #5E8233)
+        linear,left top,left bottom,color-stop(0, #8ABC33),color-stop(1, #77B12C)
     );
+    text-shadow: 0 1px 0 #3f4143;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -219,18 +220,16 @@ span.nav-anchor:hover {
     text-shadow: 0 1px 0 #c3dc74;
 }
 
-.active .nav-anchor {
-    background-color: #8ABC33;
-    background-image: linear-gradient(top, #8ABC33 0%, #77B12C 100%);
-    background-image: -o-linear-gradient(top, #8ABC33 0%, #77B12C 100%);
-    background-image: -moz-linear-gradient(top, #8ABC33 0%, #77B12C 100%);
-    background-image: -webkit-linear-gradient(top, #8ABC33 0%, #77B12C 100%);
-    background-image: -ms-linear-gradient(top, #8ABC33 0%, #77B12C 100%);
+.inactive .nav-anchor {
+    background-color: #6C8B3A;
+    background-image: linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
+    background-image: -o-linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
+    background-image: -moz-linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
+    background-image: -webkit-linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
+    background-image: -ms-linear-gradient(top, #6C8B3A 0%, #5E8233 100%);
     background-image: -webkit-gradient(
-        linear,left top,left bottom,color-stop(0, #8ABC33),color-stop(1, #77B12C)
+        linear,left top,left bottom,color-stop(0.45, #6C8B3A),color-stop(1, #5E8233)
     );
-    color: #fff;
-    text-shadow: 0 1px 0 #3f4143;
 }
 
 .coming-soon {
