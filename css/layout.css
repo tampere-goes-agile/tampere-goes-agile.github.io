@@ -112,6 +112,10 @@ aside .map {
     padding: 0.25em;
 }
 
+.sponsor-level {
+    display: inline;
+}
+
 @media screen and (min-width: 40.5em) and (max-width: 59.99em) {
     h2 {
         text-align: left;
