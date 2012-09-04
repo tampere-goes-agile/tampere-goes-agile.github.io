@@ -316,6 +316,7 @@ label {
 .speaker {
     clear: both; 
     overflow: hidden;
+    padding: 1em 0 1.5em;
 }
 
 input[type=text], input[type=email], textarea {
