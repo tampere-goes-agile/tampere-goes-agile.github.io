@@ -109,7 +109,7 @@ img {
     outline: 0;
 }
 h1 {
-    color: #deff00;
+    color: #649e21;
     font: normal 1.5em 'PT Sans', sans-serif;
     text-rendering: optimizeLegibility;
     margin-bottom: 0;
@@ -268,6 +268,10 @@ span.nav-anchor:hover {
     padding: 0 1.25em;
 }
 
+.grid-container {
+    overflow: hidden;
+}
+
 section.light {
     background: #f7f8f2;
     border-top: 4px solid #b0d246;
@@ -303,6 +307,15 @@ aside .p {
 label {
     color: #649e21;
     display: block;
+}
+
+.speaker img {
+    display: none;
+}
+
+.speaker {
+    clear: both; 
+    overflow: hidden;
 }
 
 input[type=text], input[type=email], textarea {
