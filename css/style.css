@@ -308,15 +308,19 @@ label {
     display: block;
 }
 
-.speaker img {
+.speaker img,
+.sponsor-level {
     display: none;
 }
 
-.speaker {
+.speaker,
+.sponsor {
     clear: both; 
     overflow: hidden;
     padding: 1em 0 1.5em;
 }
+
+
 
 input[type=text], input[type=email], textarea {
     border: 1px solid #8d9092;
