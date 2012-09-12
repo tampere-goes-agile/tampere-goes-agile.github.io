@@ -271,9 +271,15 @@ span.nav-anchor:hover {
     overflow: hidden;
 }
 
-.speaker p {
+/*.speaker p {
 	text-align: justify;
 }
+*/
+
+article p {
+	text-align: justify;
+}
+
 
 section.light {
     background: #f7f8f2;
