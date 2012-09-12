@@ -271,6 +271,10 @@ span.nav-anchor:hover {
     overflow: hidden;
 }
 
+.speaker p {
+	text-align: justify;
+}
+
 section.light {
     background: #f7f8f2;
     border-top: 4px solid #b0d246;
