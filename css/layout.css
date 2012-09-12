@@ -107,7 +107,7 @@ aside .map {
 }
 
 .speaker img {
-    background: url(../img/diag-bg.png) top left repeat;
+  /*  background: url(../img/diag-bg.png) top left repeat;*/
     display: inline;
     padding: 0.25em;
 }
