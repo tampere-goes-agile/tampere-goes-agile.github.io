@@ -379,6 +379,7 @@ input[type=submit] {
 #program-table {
     border-collapse: separate;
     border-spacing: 0.5em;
+    font-size: 0.875em;
     width: 100%;
 }
 
@@ -395,6 +396,10 @@ input[type=submit] {
     text-align: center;
     vertical-align: middle;
     width: 25%;
+}
+
+#program-table td a {
+    color: #3f4143;
 }
 
 #program-table td .subject {
@@ -417,6 +422,24 @@ input[type=submit] {
     -webkit-box-shadow: 2px 2px 0px #dde2db;
     -moz-box-shadow:    2px 2px 0px #dde2db;
     box-shadow:         2px 2px 0px #dde2db;
+    position: relative;
+}
+
+#program-table .indicator {
+    display: none;
+    height: 10px;
+    width: 15px;
+}
+
+#program-table .track1 .indicator {
+    background: url(../img/track1-active.png);
+}
+
+#program-table .track1.active .indicator {
+    display: block;
+    position: absolute;
+    left: 48%;
+    bottom: -10px;
 }
 
 #program-table .track2-heading {
@@ -428,6 +451,18 @@ input[type=submit] {
     -webkit-box-shadow: 2px 2px 0px #dde2db;
     -moz-box-shadow:    2px 2px 0px #dde2db;
     box-shadow:         2px 2px 0px #dde2db;
+    position: relative;
+}
+
+#program-table .track2 .indicator {
+    background: url(../img/track2-active.png);
+}
+
+#program-table .track2.active .indicator {
+    display: block;
+    position: absolute;
+    left: 48%;
+    bottom: -10px;
 }
 
 #program-table .track3-heading {
@@ -439,6 +474,18 @@ input[type=submit] {
     -webkit-box-shadow: 2px 2px 0px #dde2db;
     -moz-box-shadow:    2px 2px 0px #dde2db;
     box-shadow:         2px 2px 0px #dde2db;
+    position: relative;
+}
+
+#program-table .track3 .indicator {
+    background: url(../img/track3-active.png);
+}
+
+#program-table .track3.active .indicator {
+    display: block;
+    position: absolute;
+    left: 48%;
+    bottom: -10px;
 }
 
 #program-table .track-empty, 
@@ -447,8 +494,46 @@ input[type=submit] {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    position: relative;
+}
+
+#program-table .track-all .indicator {
+    background: url(../img/track-all-active.png);
+}
+
+#program-table .track-all.active .indicator {
+    display: block;
+    position: absolute;
+    left: 48%;
+    bottom: -10px;
 }
 
 #program-table .additional-info-row {
     display: none;
+}
+
+#program-table .additional-info-cell {
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 0px #dde2db;
+    -moz-box-shadow:    2px 2px 0px #dde2db;
+    box-shadow:         2px 2px 0px #dde2db;
+}
+
+#program-table .additional-info-row .additional-info {
+    display: none;    
+    font-weight: normal;
+    text-align: left;
+}
+
+#program-table .additional-info-row .additional-info h3 {
+    color: #3f4143;
+    font-size: 1.25em;
+}
+
+#program-table .additional-info-row .additional-info h3 a {
+    color: #2f6d94;
+}
+
+#program-table .additional-info-row .additional-info h3 a:hover {
+    text-decoration: underline;
 }
