@@ -232,7 +232,11 @@ span.nav-anchor:hover {
     );
 }
 
-.coming-soon {
+.inactive .closed {
+    text-decoration: line-through;
+}
+
+.note {
     color: #deff00;
     font-size: 0.625em;
     text-shadow: none;
