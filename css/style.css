@@ -537,3 +537,8 @@ input[type=submit] {
 #program-table .additional-info-row .additional-info h3 a:hover {
     text-decoration: underline;
 }
+
+#program-table .double-length td {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
