@@ -14,20 +14,20 @@ $(document).ready(function() {
 
   });
 
-  $('.program-row > td > a[href=#showinfo]').click(function(e) {
+  $('.program-row > td').click(function(e) {
 	e.preventDefault();
 	var infoRow = $(this).parents('.program-row').next('.additional-info-row');
-	var track = $(this).parent().attr('class') + '-info';
-	if ($(this).parent().hasClass('active')) {
-		$(this).parent().removeClass('active');
+	var track = $(this).attr('class') + '-info';
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
 		$('.additional-info-row').hide();
 		$('.additional-info-cell').children().hide();
 		$('.indicator').remove();
 	} else if (infoRow.length > 0) {
 		$('.program-row > td').removeClass('active');
-		$(this).parent().addClass('active');
+		$(this).addClass('active');
 		$('.indicator').remove();
-		$(this).parent().append('<span class="indicator">');
+		$(this).append('<span class="indicator">');
 		$('.additional-info-row').hide();
 		infoRow.show();
 		infoRow.children('.additional-info-cell').children().hide();
