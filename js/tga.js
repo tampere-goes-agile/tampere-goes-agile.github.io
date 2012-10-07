@@ -18,20 +18,22 @@ $(document).ready(function() {
     e.preventDefault();
     var infoRow = $(this).parents('.program-row').next('.additional-info-row');
     var track = $(this).attr('class') + '-info';
+    var info = infoRow.children('.additional-info-cell').children('.' + track);
+    
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
         $('.additional-info-row').hide();
         $('.additional-info-cell').children().hide();
         $('.indicator').remove();
-    } else if (infoRow.length > 0) {
+    } else if (infoRow.length > 0 && info.length > 0) {
         $('.program-row > td').removeClass('active');
         $(this).addClass('active');
         $('.indicator').remove();
-        $(this).append('<span class="indicator">');
+        $(this).append('<span class="indicator"></span>');
         $('.additional-info-row').hide();
         infoRow.show();
         infoRow.children('.additional-info-cell').children().hide();
-        infoRow.children('.additional-info-cell').children('.' + track).show();
+        info.show();
     }
   });
 
