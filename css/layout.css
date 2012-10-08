@@ -138,6 +138,13 @@ aside .map {
     margin-right: -0.5em;
 }
 
+#program-table .track-empty, 
+#program-table .track-all {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 .container {
     min-width: 71.25em;
 }
