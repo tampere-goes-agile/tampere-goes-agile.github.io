@@ -118,7 +118,24 @@ aside .map {
 }
 
 #program-table {
+    border-spacing: 0.5em;
     font-size: 1em;
+}
+
+#program-table .track1,
+#program-table .track2,
+#program-table .track3,
+#program-table .additional-info-cell,
+#program-table .double-length .has-subtracks .subtrack {
+    -webkit-box-shadow: 2px 2px 0px #dde2db;
+    -moz-box-shadow:    2px 2px 0px #dde2db;
+    box-shadow:         2px 2px 0px #dde2db;
+}
+
+#program-table .double-length .has-subtracks table {
+    border-spacing: 0.5em 0;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
 }
 
 .container {

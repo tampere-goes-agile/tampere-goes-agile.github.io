@@ -382,8 +382,8 @@ input[type=submit] {
 
 #program-table {
     border-collapse: separate;
-    border-spacing: 0.5em;
-    font-size: 0.875em;
+    border-spacing: 2px;
+    font-size: 0.75em;
     width: 100%;
 }
 
@@ -423,9 +423,6 @@ input[type=submit] {
 
 #program-table .track1 {
     background-color: #ccf712;
-    -webkit-box-shadow: 2px 2px 0px #dde2db;
-    -moz-box-shadow:    2px 2px 0px #dde2db;
-    box-shadow:         2px 2px 0px #dde2db;
     position: relative;
 }
 
@@ -452,9 +449,6 @@ input[type=submit] {
 
 #program-table .track2 {
     background-color: #96dc3d;
-    -webkit-box-shadow: 2px 2px 0px #dde2db;
-    -moz-box-shadow:    2px 2px 0px #dde2db;
-    box-shadow:         2px 2px 0px #dde2db;
     position: relative;
 }
 
@@ -475,9 +469,6 @@ input[type=submit] {
 
 #program-table .track3 {
     background-color: #6eb0d2;
-    -webkit-box-shadow: 2px 2px 0px #dde2db;
-    -moz-box-shadow:    2px 2px 0px #dde2db;
-    box-shadow:         2px 2px 0px #dde2db;
     position: relative;
 }
 
@@ -518,9 +509,6 @@ input[type=submit] {
 
 #program-table .additional-info-cell {
     background-color: #fff;
-    -webkit-box-shadow: 2px 2px 0px #dde2db;
-    -moz-box-shadow:    2px 2px 0px #dde2db;
-    box-shadow:         2px 2px 0px #dde2db;
 }
 
 #program-table .additional-info-row .additional-info {
@@ -555,16 +543,13 @@ input[type=submit] {
 #program-table .double-length .has-subtracks table {
     height: 100%;
     border-collapse: separate;
-    border-spacing: 0.5em 0em;
-    margin-left: -0.5em;
-    margin-right: -0.5em;
+    border-spacing: 2px 0em;
+    margin-left: -2px;
+    margin-right: -2px;
 }
 
 #program-table .double-length .has-subtracks .subtrack {
     background-color: #96dc3d;
-    -webkit-box-shadow: 2px 2px 0px #dde2db;
-    -moz-box-shadow:    2px 2px 0px #dde2db;
-    box-shadow:         2px 2px 0px #dde2db;
     position: relative;
     padding: 2em 1%;
     height: 100%;
