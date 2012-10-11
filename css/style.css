@@ -407,8 +407,9 @@ input[type=submit] {
 }
 
 #program-table td .subject {
-    font-style: italic;
-    font-weight: normal;
+/*    font-style: italic;
+*/    font-weight: normal;
+    text-decoration: underline;
 }
 
 #program-table td.time {
@@ -567,3 +568,4 @@ input[type=submit] {
     text-align: center;
     vertical-align: middle;    
 }
+
