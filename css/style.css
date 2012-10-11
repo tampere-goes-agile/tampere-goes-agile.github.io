@@ -424,6 +424,7 @@ input[type=submit] {
 #program-table .track1 {
     background-color: #ccf712;
     position: relative;
+    cursor: pointer;
 }
 
 #program-table .indicator {
@@ -450,6 +451,7 @@ input[type=submit] {
 #program-table .track2 {
     background-color: #96dc3d;
     position: relative;
+    cursor: pointer;
 }
 
 #program-table .track2 .indicator {
@@ -470,6 +472,7 @@ input[type=submit] {
 #program-table .track3 {
     background-color: #6eb0d2;
     position: relative;
+    cursor: pointer;
 }
 
 #program-table .track3 .indicator {
@@ -490,6 +493,14 @@ input[type=submit] {
     -moz-box-shadow: none;
     box-shadow: none;
     position: relative;
+}
+
+#program-table .track-all {
+    cursor: pointer;
+}
+
+#program-table .track-empty {
+    cursor: default;
 }
 
 #program-table .track-all .indicator {
