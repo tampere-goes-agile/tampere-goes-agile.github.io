@@ -566,7 +566,8 @@ input[type=submit] {
     padding: 2em 1%;
     height: 100%;
     text-align: center;
-    vertical-align: middle;    
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 #program-table a.walking-directions {
