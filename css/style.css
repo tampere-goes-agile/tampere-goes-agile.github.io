@@ -399,7 +399,7 @@ input[type=submit] {
     padding: 1%;
     text-align: center;
     vertical-align: middle;
-    width: 25%;
+    width: 15%;
 }
 
 #program-table td a {
@@ -428,6 +428,27 @@ input[type=submit] {
     cursor: pointer;
 }
 
+#program-table .track4-heading {
+    color: #ccf712;
+}
+
+#program-table .track4 {
+    background-color: #ccf712;
+    position: relative;
+    cursor: pointer;
+}
+
+#program-table .track5-heading {
+    color: #96dc3d;
+}
+
+#program-table .track5 {
+    background-color: #96dc3d;
+    position: relative;
+    cursor: pointer;
+}
+
+
 #program-table .indicator {
     display: none;
     height: 10px;
@@ -444,6 +465,28 @@ input[type=submit] {
     left: 48%;
     bottom: -10px;
 }
+
+#program-table .track4 .indicator {
+    background: url(../img/track1-active.png);
+}
+
+#program-table .track4.active .indicator {
+    display: block;
+    position: absolute;
+    left: 48%;
+    bottom: -10px;
+}
+#program-table .track5 .indicator {
+    background: url(../img/track1-active.png);
+}
+
+#program-table .track5.active .indicator {
+    display: block;
+    position: absolute;
+    left: 48%;
+    bottom: -10px;
+}
+
 
 #program-table .track2-heading {
     color: #96dc3d;
