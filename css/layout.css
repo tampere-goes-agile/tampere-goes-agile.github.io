@@ -73,6 +73,9 @@ h2 {
     display: block;
     padding: 1em 2em 0 18em;
 }
+#header-date-info-mobile {
+    display: none;
+}
 
 aside {
     float: left;

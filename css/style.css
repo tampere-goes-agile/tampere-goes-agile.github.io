@@ -253,6 +253,11 @@ span.nav-anchor:hover {
 #header-date-info {
     display: none;
 }
+#header-date-info-mobile {
+    display: block;
+	text-align: center;
+}
+
 
 #logo a {
     width: 6.65em;
