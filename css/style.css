@@ -582,6 +582,10 @@ input[type=submit] {
     font-size: 1.25em;
 }
 
+#program-table .additional-info-row .additional-info a {
+    color: #2f6d94;
+}
+
 #program-table .additional-info-row .additional-info h3 a {
     color: #2f6d94;
 }
