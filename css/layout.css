@@ -116,6 +116,20 @@ aside .map {
     padding: 0.25em;
 }
 
+.sponsor a { 
+	height: auto; 
+    width: 16.25em;
+    margin-left: 2.25em;
+	display: inline-block; 
+	vertical-align: middle;
+}
+.sponsor p { 
+	vertical-align: middle; 
+	display: inline-block;
+	margin-bottom: 0; 
+	margin-left: 2.25em;
+}
+
 .sponsor-level {
     display: inline;
 }
@@ -202,6 +216,16 @@ section.light {
         width: 62%;
         margin-left: 4%;
     }
+	
+	.sponsor a { 
+        width: 29%;
+        margin-left: 4%;
+	}
+	.sponsor p { 
+        width: 62%;
+        margin-left: 4%;
+	}
+	
     section.light, header {
         min-width: 0;
     }
