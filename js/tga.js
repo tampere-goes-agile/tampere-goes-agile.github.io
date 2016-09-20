@@ -20,12 +20,20 @@ $(document).ready(function() {
     var infoRow = programRow.next('.additional-info-row');
     var track = $(this).attr('class') + '-info';
     var info = infoRow.children('.additional-info-cell').children('.' + track);
-    var longSessions = $(this).nextAll('td').filter(function() {
-		return $(this).attr("rowspan") > 2;
-	});
+	
+	var clickedColumn = $(this);
+	var longSessionColumns = $([]);
+	
+	var currentRowspan = $(this).prop("rowspan");
+	if (currentRowspan == 1 || currentRowspan == undefined) {
+		longSessionColumns = programRow.children('td').filter(function() {
+			return $(this).prop('class').startsWith('track') 
+				&& $(this).prop("rowspan") > 1 && !($(this).is(clickedColumn));
+		});
+	}
 	
 	if (infoRow.length == 0 || info.length == 0) {
-		// Try the next row to enable longer sessions
+		// Try the next info row to enable longer sessions
 		infoRow = infoRow.nextAll('.additional-info-row').first();
 		info = infoRow.children('.additional-info-cell').children('.' + track);
 	}
@@ -35,10 +43,11 @@ $(document).ready(function() {
         $('.additional-info-row').hide();
         $('.additional-info-cell').children().hide();
         $('.indicator').remove();
-		
-		longSessions.attr('rowspan', function(i, rs) { return rs - 1; })
+		restoreRowSpans();
     } else if (infoRow.length > 0 && info.length > 0) {
         $('.program-row > td').removeClass('active');
+		restoreRowSpans();
+		
         $(this).addClass('active');
         $('.indicator').remove();
         $(this).append('<span class="indicator"></span>');
@@ -47,9 +56,20 @@ $(document).ready(function() {
         infoRow.children('.additional-info-cell').children().hide();
         info.show();
 		
-		longSessions.attr('rowspan', function(i, rs) { return rs + 1; })
+		longSessionColumns.each(function() {
+			var column = $(this);
+			column.data("originalRowSpan", column.prop("rowspan"));
+			column.prop('rowspan', function(i, rs) { return rs + 1; })
+		});
     }
 
   });
 
 });
+
+function restoreRowSpans() {
+	$('.program-row > td').each(function() {
+		var column = $(this);
+		column.prop('rowspan', column.data("originalRowSpan"));
+	});
+}
