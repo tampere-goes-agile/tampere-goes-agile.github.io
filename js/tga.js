@@ -24,37 +24,32 @@ $(document).ready(function() {
 
   $('.program-row > td').click(function(e) {
     e.preventDefault();
-	var programRow = $(this).parents('.program-row');
-    var infoRow = programRow.next('.additional-info-row');
+  	var programRow = $(this).parents('.program-row');
     var track = $(this).attr('class') + '-info';
-    var info = infoRow.children('.additional-info-cell').children('.' + track);
+    var results = findNextMatchingInfoRow(programRow, track)
+    var infoRow = results[0]
+    var info = results[1]
 
-	var clickedColumn = $(this);
-	var longSessionColumns = $([]);
+  	var clickedColumn = $(this);
+  	var longSessionColumns = $([]);
 
-	var currentRowspan = $(this).prop("rowspan");
-	if (currentRowspan == 1 || currentRowspan == undefined) {
-		longSessionColumns = programRow.children('td').filter(function() {
-			return $(this).prop('class').startsWith('track')
-				&& $(this).prop("rowspan") > 1 && !($(this).is(clickedColumn));
-		});
-	}
-
-	if (infoRow.length == 0 || info.length == 0) {
-		// Try the next info row to enable longer sessions
-		infoRow = infoRow.nextAll('.additional-info-row').first();
-		info = infoRow.children('.additional-info-cell').children('.' + track);
-	}
+  	var currentRowspan = $(this).prop("rowspan");
+  	if (currentRowspan == 1 || currentRowspan == undefined) {
+  		longSessionColumns = programRow.children('td').filter(function() {
+  			return $(this).prop('class').startsWith('track')
+  				&& $(this).prop("rowspan") > 1 && !($(this).is(clickedColumn));
+  		});
+  	}
 
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
         $('.additional-info-row').hide();
         $('.additional-info-cell').children().hide();
         $('.indicator').remove();
-		restoreRowSpans();
+        restoreRowSpans();
     } else if (infoRow.length > 0 && info.length > 0) {
         $('.program-row > td').removeClass('active');
-		restoreRowSpans();
+        restoreRowSpans();
 
         $(this).addClass('active');
         $('.indicator').remove();
@@ -64,11 +59,11 @@ $(document).ready(function() {
         infoRow.children('.additional-info-cell').children().hide();
         info.show();
 
-		longSessionColumns.each(function() {
-			var column = $(this);
-			column.data("originalRowSpan", column.prop("rowspan"));
-			column.prop('rowspan', function(i, rs) { return rs + 1; })
-		});
+  	longSessionColumns.each(function() {
+  		var column = $(this);
+  		column.data("originalRowSpan", column.prop("rowspan"));
+  		column.prop('rowspan', function(i, rs) { return rs + 1; })
+  	});
     }
 
   });
@@ -80,4 +75,11 @@ function restoreRowSpans() {
 		var column = $(this);
 		column.prop('rowspan', column.data("originalRowSpan"));
 	});
+}
+
+function findNextMatchingInfoRow(programRow, track) {
+  var infoRows = programRow.nextAll('.additional-info-row');
+  var infos = infoRows.find('.' + track);
+  var info = infos.first()
+  return [info.parent().parent(), info]
 }
