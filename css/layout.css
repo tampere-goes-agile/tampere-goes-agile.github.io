@@ -1,6 +1,6 @@
 body {
     background: url(../img/body-bg.jpg) #3f4143 top center no-repeat;
-    font: 100%/1.5 'PT Sans', sans-serif; 
+    font: 100%/1.5 'PT Sans', sans-serif;
 }
 
 header {
@@ -58,7 +58,7 @@ h2 {
 }
 #logo a img {
     width: 215px;
-    height: auto;   
+    height: auto;
 }
 
 #header-free {
@@ -116,17 +116,17 @@ aside .map {
     padding: 0.25em;
 }
 
-.sponsor a { 
-	height: auto; 
+.sponsor a {
+	height: auto;
     width: 16.25em;
     margin-left: 2.25em;
-	display: inline-block; 
+	display: inline-block;
 	vertical-align: middle;
 }
-.sponsor p { 
-	vertical-align: middle; 
+.sponsor p {
+	vertical-align: middle;
 	display: inline-block;
-	margin-bottom: 0; 
+	margin-bottom: 0;
 	margin-left: 2.25em;
 }
 
@@ -157,7 +157,7 @@ aside .map {
     margin-right: -0.5em;
 }
 
-#program-table .track-empty, 
+#program-table .track-empty,
 #program-table .track-all {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -172,7 +172,7 @@ section.light {
     min-width: 73.75em;
 }
 
-@media screen and (min-width: 40.5em) and (max-width: 59.99em) {
+@media screen and (min-width: 40.0em) and (max-width: 59.99em) {
     h2 {
         text-align: left;
     }
@@ -184,7 +184,7 @@ section.light {
     #nav {
         width: 29%;
         margin-right: 4%;
-    } 
+    }
     .left-col {
         display: block;
         float: none;
@@ -216,16 +216,16 @@ section.light {
         width: 62%;
         margin-left: 4%;
     }
-	
-	.sponsor a { 
+
+	.sponsor a {
         width: 29%;
         margin-left: 4%;
 	}
-	.sponsor p { 
+	.sponsor p {
         width: 62%;
         margin-left: 4%;
 	}
-	
+
     section.light, header {
         min-width: 0;
     }
