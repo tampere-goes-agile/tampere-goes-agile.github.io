@@ -1,15 +1,23 @@
 $(document).ready(function() {
-  
+
+  // Polyfill
+  if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function(searchString, position) {
+      position = position || 0;
+      return this.indexOf(searchString, position) === position;
+    };
+  }
+
   $('nav a[href*=#]').bind('click', function(e) {
     e.preventDefault(); //prevent the "normal" behaviour which would be a "hard" jump
-         
+
     var target = $(this).attr("href"); //Get the target
-        
+
     // perform animated scrolling by getting top-position of target-element and set it as scroll target
     $('html, body').stop().animate({ scrollTop: $(target).offset().top }, 400, function() {
          location.hash = target;  //attach the hash (#jumptarget) to the pageurl
     });
-        
+
     return false;
 
   });
@@ -20,24 +28,24 @@ $(document).ready(function() {
     var infoRow = programRow.next('.additional-info-row');
     var track = $(this).attr('class') + '-info';
     var info = infoRow.children('.additional-info-cell').children('.' + track);
-	
+
 	var clickedColumn = $(this);
 	var longSessionColumns = $([]);
-	
+
 	var currentRowspan = $(this).prop("rowspan");
 	if (currentRowspan == 1 || currentRowspan == undefined) {
 		longSessionColumns = programRow.children('td').filter(function() {
-			return $(this).prop('class').startsWith('track') 
+			return $(this).prop('class').startsWith('track')
 				&& $(this).prop("rowspan") > 1 && !($(this).is(clickedColumn));
 		});
 	}
-	
+
 	if (infoRow.length == 0 || info.length == 0) {
 		// Try the next info row to enable longer sessions
 		infoRow = infoRow.nextAll('.additional-info-row').first();
 		info = infoRow.children('.additional-info-cell').children('.' + track);
 	}
-	
+
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
         $('.additional-info-row').hide();
@@ -47,7 +55,7 @@ $(document).ready(function() {
     } else if (infoRow.length > 0 && info.length > 0) {
         $('.program-row > td').removeClass('active');
 		restoreRowSpans();
-		
+
         $(this).addClass('active');
         $('.indicator').remove();
         $(this).append('<span class="indicator"></span>');
@@ -55,7 +63,7 @@ $(document).ready(function() {
         infoRow.show();
         infoRow.children('.additional-info-cell').children().hide();
         info.show();
-		
+
 		longSessionColumns.each(function() {
 			var column = $(this);
 			column.data("originalRowSpan", column.prop("rowspan"));
