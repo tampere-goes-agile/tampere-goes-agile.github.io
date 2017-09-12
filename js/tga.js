@@ -31,15 +31,7 @@ $(document).ready(function() {
     var info = results[1]
 
   	var clickedColumn = $(this);
-  	var longSessionColumns = $([]);
-
-  	var currentRowspan = $(this).prop("rowspan");
-  	if (currentRowspan == 1 || currentRowspan == undefined) {
-  		longSessionColumns = programRow.children('td').filter(function() {
-  			return $(this).prop('class').startsWith('track')
-  				&& $(this).prop("rowspan") > 1 && !($(this).is(clickedColumn));
-  		});
-  	}
+  	var longSessionColumns = findLongSessionsAbove(programRow, clickedColumn)
 
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
@@ -82,4 +74,30 @@ function findNextMatchingInfoRow(programRow, track) {
   var infos = infoRows.find('.' + track);
   var info = infos.first()
   return [info.parent().parent(), info]
+}
+
+function findLongSessionsAbove(programRow, clickedColumn) {
+  var currentRowspan = clickedColumn.prop("rowspan");
+  if (currentRowspan == 1 || currentRowspan == undefined) {
+
+    var allProgramRows = $('.program-row')
+    var clickedRowIndex = allProgramRows.index(programRow)
+
+    var longSessionColumns = allProgramRows.map(function() {
+      var index = allProgramRows.index($(this))
+      var distance = clickedRowIndex - index
+
+      if (distance >= 0) {
+        return $(this).children('td').filter(function() {
+          return $(this).prop('class').startsWith('track')
+            && $(this).prop("rowspan") > (distance + 1) && !($(this).is(clickedColumn));
+        });
+      } else return $([]);
+    })
+
+    return longSessionColumns
+  } else {
+    return $([])
+  }
+
 }
